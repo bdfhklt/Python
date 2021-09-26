@@ -1,6 +1,6 @@
 import os, glob, chardet
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 	# 텍스트 파일의 인코딩을 'UTF-8'로 변환
 	for filePath in glob.glob(os.path.join(os.path.dirname(__file__), 'input/*')):
 		fileContent = ''
