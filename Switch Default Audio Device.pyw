@@ -3,7 +3,7 @@ import os, subprocess, winsound, configparser
 if __name__ == '__main__':
 	device1 = 'Speaker'
 	device2 = 'Headphone'
-	unmuteSystemSoundsExe = os.path.join(os.path.dirname(__file__), r'..\UnmuteSystemSounds\UnmuteSystemSounds.exe')
+	unmuteSystemSoundsExe = os.path.join(os.path.dirname(__file__), r'..\UnmuteSystemSounds\Release\net5.0\UnmuteSystemSounds.exe')
 	soundVolumeViewExe = os.path.join(os.path.dirname(__file__), r'..\SoundVolumeView\soundvolumeview-x64\SoundVolumeView.exe')
 	subprocess.run(unmuteSystemSoundsExe)
 
