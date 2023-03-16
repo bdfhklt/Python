@@ -19,6 +19,10 @@ if __name__ == '__main__':
 			if root.find('Active').text == '1':
 				root.find('Active').text = '0'
 				isEdited = True
+		if root.find('Keymap').find('ActiveKeymap').text != '1':
+			root.find('Keymap').find('ActiveKeymap').text = '1'
+			isEdited = True
+
 		if isEdited:
 			print(filePath)
 			try:

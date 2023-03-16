@@ -18,3 +18,6 @@ def userScript():
 	if(os.path.exists(filePath2)):
 		return send_file(filePath2)
 	return ''
+
+if __name__ == '__main__':
+	app.run()
