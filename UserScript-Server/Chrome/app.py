@@ -1,0 +1,23 @@
+import os
+from flask import Flask, request, jsonify, send_file
+
+app = Flask(__name__)
+
+# @app.route('/')
+# def test():
+# 	print('test')
+# 	return 'test'
+
+@app.route('/user-script', methods=['GET'])
+def userScript():
+	# print(request.args)
+	filePath1 = 'C:/GitHub/Chrome-Extension/Public/UserScript/{}.js'.format(request.args['file-name'])
+	filePath2 = 'C:/GitHub/Chrome-Extension/Private/UserScript/{}.js'.format(request.args['file-name'])
+	if(os.path.exists(filePath1)):
+		return send_file(filePath1)
+	if(os.path.exists(filePath2)):
+		return send_file(filePath2)
+	return ''
+
+if __name__ == '__main__':
+	app.run()
